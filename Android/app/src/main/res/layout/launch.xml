@@ -3,12 +3,12 @@
     <data>
         <variable
             name="viewModel"
-            type="club.plus1.i2i.view.launch.LaunchViewModel" />
+            type="club.plus1.i2i.ui.launch.LaunchViewModel" />
     </data>
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.launch.LaunchActivity" >
+        tools:context=".ui.launch.LaunchActivity" >
 
         <ImageView
             android:id="@+id/imageLogo"
