@@ -1,10 +1,9 @@
-package club.plus1.i2i;
+package club.plus1.i2i.iterator;
 
 import android.app.Application;
 
 import androidx.room.Room;
 
-import club.plus1.i2i.db.DB;
 import club.plus1.i2i.entity.User;
 
 public class App extends Application {

@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <data>
-        <variable
-            name="viewModel"
-            type="club.plus1.i2i.ui.users.UserItemViewModel" />
-    </data>
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -13,6 +9,7 @@
         <TextView
             android:id="@+id/textName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textSize="36sp" />
     </LinearLayout>
 </layout>

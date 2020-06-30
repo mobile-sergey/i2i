@@ -1,4 +1,4 @@
-package club.plus1.i2i.db;
+package club.plus1.i2i.iterator;
 
 import androidx.room.Dao;
 import androidx.room.Delete;

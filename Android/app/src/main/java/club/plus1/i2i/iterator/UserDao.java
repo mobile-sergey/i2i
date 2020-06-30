@@ -1,4 +1,4 @@
-package club.plus1.i2i.db;
+package club.plus1.i2i.iterator;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -15,6 +15,9 @@ public interface UserDao {
 
     @Insert
     void create(User user);
+
+    @Query("SELECT COUNT(id) FROM users")
+    int count();
 
     @Query("SELECT * FROM users")
     List<User> readAll();
