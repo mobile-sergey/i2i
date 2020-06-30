@@ -1,0 +1,28 @@
+name: iOS
+
+on:
+  push:
+    branches: 
+    - master
+    paths:
+    - 'iOS/**'
+    - '.github/workflows/ios.yml'
+  pull_request:
+    branches:
+    - master
+    paths:
+    - 'iOS/**'
+    - '.github/workflows/ios.yml'
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Force Xcode 11
+      run: sudo xcode-select -switch /Applications/Xcode_11.5.app
+    - name: Build App
+      run: xcodebuild -project "iOS/i2i.xcodeproj" -scheme "i2i" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
+
