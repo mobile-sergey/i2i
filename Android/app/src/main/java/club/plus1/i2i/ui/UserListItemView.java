@@ -1,4 +1,4 @@
-package club.plus1.i2i.presenter;
+package club.plus1.i2i.ui;
 
 import android.view.View;
 import android.widget.LinearLayout;
@@ -8,12 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import club.plus1.i2i.R;
 
-public class UserItemModel extends RecyclerView.ViewHolder {
+public class UserListItemView extends RecyclerView.ViewHolder {
 
-    TextView textName;
-    LinearLayout line;
+    public TextView textName;
+    public LinearLayout line;
 
-    public UserItemModel(View itemView) {
+    public UserListItemView(View itemView) {
         super(itemView);
         textName = itemView.findViewById(R.id.textName);
         line = itemView.findViewById(R.id.line);

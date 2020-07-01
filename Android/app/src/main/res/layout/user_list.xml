@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".view.UserListActivity">
+        tools:context=".ui.UserListActivity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/users"
@@ -21,6 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/add_contact"
-            android:onClick="@{(view) -> UserRouter.onAdd(view)}"/>
+            android:onClick="@{() -> UserRouter.onAdd(context)}"/>
     </LinearLayout>
 </layout>

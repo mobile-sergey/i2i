@@ -14,64 +14,45 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-import club.plus1.i2i.iterator.App;
 import club.plus1.i2i.R;
 import club.plus1.i2i.entity.User;
 import club.plus1.i2i.router.UserRouter;
+import club.plus1.i2i.ui.UserListItemView;
 
-public class UserListAdapter extends RecyclerView.Adapter<UserItemModel> {
+public class UserListAdapter extends RecyclerView.Adapter<UserListItemView> {
 
-    Context context;
-    List<User> list;
-    Handler handler;
-    UserListAdapter adapter;
+    public static List<User> list;
+    public static Handler handler;
+    private Context context;
 
     @SuppressLint("HandlerLeak")
     public UserListAdapter(Context context){
         this.context = context;
-        this.list = new ArrayList<>();
-        adapter = this;
+        list = new ArrayList<>();
         handler = new Handler(){
             public void handleMessage(@NotNull android.os.Message msg){
-                adapter.list = list;
-                adapter.notifyDataSetChanged();
+                notifyDataSetChanged();
             }
         };
     }
 
-    public void readList(){
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                list = App.app.db.userDao().readAll();
-                handler.sendEmptyMessage(0);
-            }
-        });
-        thread.start();
-    }
-
     @NotNull
     @Override
-    public UserItemModel onCreateViewHolder(ViewGroup parent, int viewType) {
+    public UserListItemView onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_item, parent, false);
-        return new UserItemModel(view);
+        return new UserListItemView(view);
     }
 
     @Override
-    public void onBindViewHolder(@NotNull UserItemModel holder, final int position) {
+    public void onBindViewHolder(@NotNull UserListItemView holder, final int position) {
         final User user = list.get(position);
         holder.textName.setText(user.name);
         holder.line.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserRouter.onEdit(v, user, position);
+                UserRouter.onChat(context);
             }
         });
-    }
-
-    public void setList(List<User> list) {
-        this.list = list;
-        notifyDataSetChanged();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package club.plus1.i2i.view;
+package club.plus1.i2i.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -14,7 +14,7 @@ import club.plus1.i2i.R;
 import club.plus1.i2i.databinding.MessageListBinding;
 import club.plus1.i2i.entity.Message;
 import club.plus1.i2i.presenter.MessageAdapter;
-import club.plus1.i2i.presenter.MessageListViewModel;
+import club.plus1.i2i.presenter.MessageListModel;
 
 public class MessageListActivity extends AppCompatActivity {
 
@@ -28,7 +28,7 @@ public class MessageListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         binding = DataBindingUtil.setContentView(this, R.layout.message_list);
-        binding.setViewModel(new MessageListViewModel());
+        binding.setViewModel(new MessageListModel());
 
         list = new ArrayList<>();
         adapter = new MessageAdapter(this, list);

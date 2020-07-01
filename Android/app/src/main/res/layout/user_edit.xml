@@ -6,13 +6,13 @@
         <import type="club.plus1.i2i.router.UserRouter" />
         <variable
             name="viewModel"
-            type="club.plus1.i2i.presenter.UserListModel" />
+            type="club.plus1.i2i.presenter.UserEditModel" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="club.plus1.i2i.view.UserEditActivity">
+        tools:context="club.plus1.i2i.ui.UserEditActivity">
 
         <EditText
             android:id="@+id/editName"
@@ -49,13 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/button_save"
-            android:onClick="@{() -> UserRouter.onSave(viewModel)}"/>
+            android:onClick="@{() -> UserRouter.onSave(context, viewModel)}"/>
 
-        <Button
-            android:id="@+id/buttonChat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/button_chat"
-            android:onClick="@{(view) -> UserRouter.onChat(view)}"/>
     </LinearLayout>
 </layout>

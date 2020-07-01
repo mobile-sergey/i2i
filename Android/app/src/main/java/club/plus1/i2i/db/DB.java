@@ -1,4 +1,4 @@
-package club.plus1.i2i.iterator;
+package club.plus1.i2i.db;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;

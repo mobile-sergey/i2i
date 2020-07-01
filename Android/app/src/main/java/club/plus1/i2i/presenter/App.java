@@ -1,16 +1,17 @@
-package club.plus1.i2i.iterator;
+package club.plus1.i2i.presenter;
 
 import android.app.Application;
 
 import androidx.room.Room;
 
+import club.plus1.i2i.db.DB;
 import club.plus1.i2i.entity.User;
 
 public class App extends Application {
 
     public static App app;
+    public static DB db;
     public User i = new User();
-    public DB db;
 
     @Override
     public void onCreate() {
