@@ -1,3 +1,9 @@
+## Code
+
+Android: [https://github.com/lavsexpert/i2i/tree/Android]
+
+iOS: [https://github.com/lavsexpert/i2i/tree/iOS]
+
 ## Vision
 Отличия от других месседжеров:
 
