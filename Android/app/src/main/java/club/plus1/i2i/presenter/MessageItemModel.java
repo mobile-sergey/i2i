@@ -1,11 +1,11 @@
-package club.plus1.i2i.ui.messages;
+package club.plus1.i2i.presenter;
 
 import androidx.databinding.ObservableField;
 
-public class MessageItemViewModel {
+public class MessageItemModel {
     public ObservableField<String> message;
 
-    public MessageItemViewModel(){
+    public MessageItemModel(){
         message = new ObservableField<>();
     }
 }

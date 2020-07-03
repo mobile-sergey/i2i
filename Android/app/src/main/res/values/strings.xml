@@ -3,4 +3,11 @@
     <string name="add_contact">Добавить контакт</string>
     <string name="send_message"><![CDATA[>]]></string>
     <string name="logo">Logo</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="enter_phone">Введите номер телефона</string>
+    <string name="enter_email">Введите e-mail</string>
+    <string name="button_save">Сохранить</string>
+    <string name="button_chat">Написать сообщение</string>
+    <string name="version">Версия %1$s.%2$d</string>
+    <string name="error_package_not_found">Не удалось найти пакет приложения</string>
 </resources>

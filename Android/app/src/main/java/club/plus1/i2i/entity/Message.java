@@ -11,10 +11,10 @@ public class Message {
     public int id;
 
     @ColumnInfo
-    public User from;
+    public int from;
 
     @ColumnInfo
-    public User to;
+    public int to;
 
     @ColumnInfo
     public String message;
