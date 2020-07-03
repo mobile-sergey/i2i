@@ -16,6 +16,9 @@ public interface UserDao {
     @Insert
     void create(User user);
 
+    @Query("SELECT MAX(id)+1 FROM users")
+    int count();
+
     @Query("SELECT * FROM users")
     List<User> readAll();
 

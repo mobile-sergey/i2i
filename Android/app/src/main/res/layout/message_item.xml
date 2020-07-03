@@ -3,7 +3,7 @@
     <data>
         <variable
             name="viewModel"
-            type="club.plus1.i2i.ui.messages.MessageItemViewModel" />
+            type="club.plus1.i2i.presenter.MessageItemModel" />
     </data>
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"

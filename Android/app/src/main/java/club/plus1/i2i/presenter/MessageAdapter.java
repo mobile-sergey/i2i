@@ -1,4 +1,4 @@
-package club.plus1.i2i.ui.users;
+package club.plus1.i2i.presenter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,14 +13,14 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 import club.plus1.i2i.R;
-import club.plus1.i2i.entity.User;
+import club.plus1.i2i.entity.Message;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
+public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
 
     Context context;
-    List<User> list;
+    List<Message> list;
 
-    public UserAdapter(Context context, List<User> list){
+    public MessageAdapter(Context context, List<Message> list){
         this.context = context;
         this.list = list;
     }
@@ -28,14 +28,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     @NotNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.message_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NotNull ViewHolder holder, int position) {
-        User user = list.get(position);
-        holder.textName.setText(user.name);
+        Message message = list.get(position);
+        holder.textMessage.setText(message.message);
     }
 
     @Override
@@ -45,9 +45,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView textName;
+        TextView textMessage;
         public ViewHolder(View itemView) {
             super(itemView);
-            textName = itemView.findViewById(R.id.textName);
+            textMessage = itemView.findViewById(R.id.textMessage);
         }
-    }}
+    }
+}
