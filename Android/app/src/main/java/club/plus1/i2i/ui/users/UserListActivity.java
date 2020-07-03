@@ -1,4 +1,4 @@
-package club.plus1.i2i.view.users;
+package club.plus1.i2i.ui.users;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -12,7 +12,7 @@ import java.util.List;
 
 import club.plus1.i2i.R;
 import club.plus1.i2i.databinding.UserListBinding;
-import club.plus1.i2i.model.User;
+import club.plus1.i2i.entity.User;
 
 public class UserListActivity extends AppCompatActivity {
 

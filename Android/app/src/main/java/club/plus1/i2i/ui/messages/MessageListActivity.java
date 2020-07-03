@@ -1,4 +1,4 @@
-package club.plus1.i2i.view.messages;
+package club.plus1.i2i.ui.messages;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -12,7 +12,7 @@ import java.util.List;
 
 import club.plus1.i2i.R;
 import club.plus1.i2i.databinding.MessageListBinding;
-import club.plus1.i2i.model.Message;
+import club.plus1.i2i.entity.Message;
 
 public class MessageListActivity extends AppCompatActivity {
 

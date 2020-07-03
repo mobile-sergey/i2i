@@ -1,4 +1,4 @@
-package club.plus1.i2i.view.launch;
+package club.plus1.i2i.ui.launch;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -9,7 +9,7 @@ import android.os.Handler;
 
 import club.plus1.i2i.R;
 import club.plus1.i2i.databinding.LaunchBinding;
-import club.plus1.i2i.view.users.UserListActivity;
+import club.plus1.i2i.ui.users.UserListActivity;
 
 public class LaunchActivity extends AppCompatActivity {
 
