@@ -1,10 +1,10 @@
-package club.plus1.i2i.view.messages;
+package club.plus1.i2i.ui.messages;
 
 import androidx.databinding.ObservableArrayList;
 import androidx.databinding.ObservableField;
 
-import club.plus1.i2i.model.Message;
-import club.plus1.i2i.model.User;
+import club.plus1.i2i.entity.Message;
+import club.plus1.i2i.entity.User;
 
 public class MessageListViewModel {
     ObservableField<User> user;

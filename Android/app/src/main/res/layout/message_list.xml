@@ -4,13 +4,13 @@
     <data>
         <variable
             name="viewModel"
-            type="club.plus1.i2i.view.messages.MessageListViewModel" />
+            type="club.plus1.i2i.ui.messages.MessageListViewModel" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.messages.MessageListActivity">
+    tools:context=".ui.messages.MessageListActivity">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/messages"
