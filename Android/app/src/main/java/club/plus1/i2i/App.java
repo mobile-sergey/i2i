@@ -2,19 +2,22 @@ package club.plus1.i2i;
 
 import android.app.Application;
 
-import club.plus1.i2i.model.User;
+import androidx.room.Room;
+
+import club.plus1.i2i.db.DB;
+import club.plus1.i2i.entity.User;
 
 public class App extends Application {
 
     public static App app;
     public User i = new User();
-
-    public App(){
-        app = this;
-    }
+    public DB db;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        app = this;
+        db = Room.databaseBuilder(this, DB.class, "db")
+                .fallbackToDestructiveMigration().build();
     }
 }
